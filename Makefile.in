@@ -1,0 +1,22 @@
+NAME=slime_vball
+
+bin/$(NAME): main.c
+	@mkdir -p bin
+	@CC@ -Wall -pedantic -o $@ $< -lSDL -lSDL_gfx -lm
+
+#################
+# Phony Targets #
+#################
+
+install: bin/$(NAME)
+	mkdir -p $(DESTDIR)@prefix@/bin
+	cp bin/$(NAME) $(DESTDIR)@prefix@/bin/$(NAME)
+
+uninstall:
+	$(RM) $(DESTDIR)@prefix@/bin/$(NAME)
+
+clean:
+	$(RM) -r bin/$(NAME)
+
+.PHONY: all clean
+
