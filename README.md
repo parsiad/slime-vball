@@ -7,8 +7,8 @@ Instructions
 ------------
 
 ```
-> autoconf
-> ./configure
-> make
-> ./bin/slime-vball
+$ autoconf
+$ ./configure
+$ make
+$ ./bin/slime-vball
 ```
