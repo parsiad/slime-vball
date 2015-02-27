@@ -1,4 +1,4 @@
-NAME=slime_vball
+NAME=slime-vball
 
 bin/$(NAME): main.c
 	@mkdir -p bin
